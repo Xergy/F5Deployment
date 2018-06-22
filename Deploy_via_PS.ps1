@@ -75,8 +75,6 @@ $servicePrincipalSecretSecure = ConvertTo-SecureString -String $servicePrincipal
 
 (ConvertFrom-Json $tagValues).psobject.properties | ForEach -Begin {$tagValues=@{}} -process {$tagValues."$($_.Name)" = $_.Value}
 
-#Write-Host "Break" ; break
-
 # Create Arm Deployment
 if ($licenseType -eq "BYOL") {
   if ($templateFilePath -eq "azuredeploy.json") { $templateFilePath = ".\BYOL\azuredeploy_prod_stack.json"; $parametersFilePath = ".\BYOL\azuredeploy.parameters.json" }
