@@ -160,6 +160,9 @@ if ($licenseType -eq "BYOL") {
   if ($templateFilePath -eq "azuredeploy.json") { $templateFilePath = ".\BIGIQ\azuredeploy.json"; $parametersFilePath = ".\BIGIQ\azuredeploy.parameters.json" }
   $bigIqPasswordSecure = ConvertTo-SecureString -String $bigIqPassword -AsPlainText -Force
   $deployment = New-AzureRmResourceGroupDeployment -Name $resourceGroupName -ResourceGroupName $resourceGroupName -TemplateFile $templateFilePath -TemplateParameterFile $parametersFilePath -Verbose -adminUsername $adminUsername -authenticationType $authenticationType -adminPasswordOrKey $adminPasswordOrKeySecure -dnsLabel $dnsLabel -instanceName $instanceName -instanceType $instanceType -imageName $imageName -bigIpVersion $bigIpVersion -numberOfAdditionalNics $numberOfAdditionalNics -additionalNicLocation $additionalNicLocation -numberOfExternalIps $numberOfExternalIps -vnetName $vnetName -vnetResourceGroupName $vnetResourceGroupName -mgmtSubnetName $mgmtSubnetName -mgmtIpAddressRangeStart $mgmtIpAddressRangeStart -externalSubnetName $externalSubnetName -externalIpSelfAddressRangeStart $externalIpSelfAddressRangeStart -externalIpAddressRangeStart $externalIpAddressRangeStart -internalSubnetName $internalSubnetName -internalIpAddressRangeStart $internalIpAddressRangeStart -tenantId $tenantId -clientId $clientId -servicePrincipalSecret $servicePrincipalSecretSecure -managedRoutes $managedRoutes -ntpServer $ntpServer -timeZone $timeZone -customImage $customImage -restrictedSrcAddress $restrictedSrcAddress -tagValues $tagValues -allowUsageAnalytics $allowUsageAnalytics  -bigIqAddress "$bigIqAddress" -bigIqUsername "$bigIqUsername" -bigIqPassword $bigIqPasswordSecure -bigIqLicensePoolName "$bigIqLicensePoolName" -bigIqLicenseSkuKeyword1 "$bigIqLicenseSkuKeyword1" -bigIqLicenseUnitOfMeasure "$bigIqLicenseUnitOfMeasure"
+
+
+
 } else {
   Write-Error -Message "Please select a valid license type of PAYG, BYOL or BIGIQ."
 }
