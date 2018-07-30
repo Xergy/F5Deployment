@@ -1,6 +1,7 @@
 ﻿
 #if not logged in to Azure, start login
 if ((Get-AzureRmContext).Account -eq $Null) {
+    
 Connect-AzureRmAccount -Environment AzureUSGovernment}
 
 #List all subs:

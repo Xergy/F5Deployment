@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "usgovvirginia"
+        },
+        "virtualMachineName": {
+            "value": "BigIQ2"
+        },
+        "adminPassword": {
+            "value": "S3cedit1234518!"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "virtualNetworkName": {
+            "value": "prodnet"
+        },
+        "networkInterfaceName": {
+            "value": "bigiq2948"
+        },
+        "networkSecurityGroupName": {
+            "value": "BigIQ2-nsg"
+        },
+        "adminPassword": {
+            "value": "<EnterPassword>"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "prodrgdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/ed347077-d367-4401-af11-a87b73bbae0e/resourceGroups/prod-rg/providers/Microsoft.Storage/storageAccounts/prodrgdiag"
+        },
+        "subnetName": {
+            "value": "Subnet1"
+        },
+        "publicIpAddressName": {
+            "value": "BigIQ2-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        }
+    }
+}

@@ -15,7 +15,7 @@ $HashArguments = @{
     instanceName = "f5instance"
     instanceType = "Standard_DS3_v2"
     imageName = "Best"
-    bigIpVersion = "13.1.0200"
+    bigIpVersion = "latest"
     numberOfAdditionalNics = "0"
     additionalNicLocation = "OPTIONAL"
     numberOfExternalIps = "0"
@@ -37,8 +37,8 @@ $HashArguments = @{
     customImage = "OPTIONAL"
     allowUsageAnalytics = "Yes"
     resourceGroupName = "F5-RG"
-    LicenseKey1 = "HERYA-OESBL-LDZKV-CKPCM-TQEQNOM"
-    LicenseKey2 = "JEKWI-AFKXX-FNMVR-ARYGG-PABAZYM"
+    LicenseKey1 = "ZTECY-DTPOL-RMODU-OAQBB-AXCGZCM"
+    LicenseKey2 = "YQCDX-TPUYU-MODOA-HBGOH-MMTVSMP"
     tagValues = '{"environment": "PREPROD"}' 
 
 }

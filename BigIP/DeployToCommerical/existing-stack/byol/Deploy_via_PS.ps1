@@ -46,7 +46,7 @@ param(
 Write-Host "Disclaimer: Scripting to Deploy F5 Solution templates into Cloud Environments are provided as examples. They will be treated as best effort for issues that occur, feedback is encouraged." -foregroundcolor green
 Start-Sleep -s 3
 
-# Connect to Azure, right now it is only interactive login
+<# Connect to Azure, right now it is only interactive login
 try {
     Write-Host "Checking if already logged in!"
     Get-AzureRmSubscription | Out-Null
@@ -56,9 +56,11 @@ try {
       Write-Host "Not logged in, please login..."
       Login-AzureRmAccount
     }
+#>
+
 
 # Create Resource Group for ARM Deployment
-New-AzureRmResourceGroup -Name $resourceGroupName -Location "$region"
+# New-AzureRmResourceGroup -Name $resourceGroupName -Location "$region"
 
 $adminPasswordOrKeySecure = ConvertTo-SecureString -String $adminPasswordOrKey -AsPlainText -Force
 $servicePrincipalSecretSecure = ConvertTo-SecureString -String $servicePrincipalSecret -AsPlainText -Force
