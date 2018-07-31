@@ -37,15 +37,6 @@
         },
         "subnetName": {
             "value": "Subnet1"
-        },
-        "publicIpAddressName": {
-            "value": "BigIQ2-ip"
-        },
-        "publicIpAddressType": {
-            "value": "Dynamic"
-        },
-        "publicIpAddressSku": {
-            "value": "Basic"
         }
     }
 }
