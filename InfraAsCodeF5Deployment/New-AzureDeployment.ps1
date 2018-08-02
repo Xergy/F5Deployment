@@ -90,8 +90,8 @@ foreach($Deployment in $deployDeployment)
         DeploymentName = $Deployment.DeploymentName
     }
 
-    # Pause for a second otherwise we can have name collision issues
-    Start-Sleep -Second 1
+    # Pause for 5 seconds otherwise we can have name collision issues
+    Start-Sleep -Second 5
 }
 
 do
@@ -99,7 +99,6 @@ do
     $jobsStillRunning = $false
     foreach($deploymentJob in $deploymentJobs)
     {
-        Write-Host "Receive Job Results..."
         Receive-Job -Job $deploymentJob.Job
 
         $currentStatus = Get-Job -Id $deploymentJob.Job.Id
@@ -107,6 +106,7 @@ do
         if(@("NotStarted", "Running") -contains $currentStatus.State)
         {
             $jobsStillRunning = $true
+            Start-Sleep -Second 10
         }
     }
 }
