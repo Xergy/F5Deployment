@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "usgovvirginia"
+        },
+        "virtualMachineName": {
+            "value": "vaazviambigiq2"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D4s_v3"
+        },
+        "adminUsername": {
+            "value": "azureadmf5"
+        },
+        "virtualNetworkName": {
+            "value": "GOV-PROD-EAST-3"
+        },
+        "networkInterfaceName": {
+            "value": "vaazviambigiq299"
+        },
+        "networkSecurityGroupName": {
+            "value": "vaazviambigiq2-nsg"
+        },
+        "adminPassword": {
+            "value": "F5Celtics2018"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "prodacs100diag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/7c2f587d-7a26-449f-a3de-7e2890bf3613/resourceGroups/acsprod-prod-int-east-rg/providers/Microsoft.Storage/storageAccounts/prodacs100diag"
+        },
+        "subnetName": {
+            "value": "N7-Subnet-03"
+        }
+    }
+}
