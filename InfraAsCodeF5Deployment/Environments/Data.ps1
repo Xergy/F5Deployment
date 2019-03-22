@@ -8,7 +8,7 @@ Write-Host "Loading Configuration Data..."
 $Deployments= @(
     @{
         ResourceGroupName = "F5-RG"
-        TemplateFilePath = "D:\F5Deployment\InfraAsCodeF5Deployment\ArmTemplates\F5ClusteredDeployment.json"
+        TemplateFilePath = "D:\F5Deployment\InfraAsCodeF5Deployment\ArmTemplates\F5ClusteredDeploymentMock.json"
         DeploymentName = "F5ClusteredDeployment-Prod"
         Subscription = "ed347077-d367-4401-af11-a87b73bbae0e"
         Parameters = @{
